@@ -1,6 +1,6 @@
 from flask import Flask, render_template, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy
-from flaskext.markdown import Markdown
+from flask_markdown import Markdown
 
 
 app = Flask(__name__)
