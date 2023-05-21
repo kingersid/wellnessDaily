@@ -1,0 +1,133 @@
+/* hex_values="Sage green: #9DC183, Olive green: #6B8E23, 
+Terracotta: #E2725B,Sand beige: #D2B48C Warm brown: #8B5A2B 
+Pale yellow: #F0E68C" */
+
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
+* {
+    margin: 0px;
+    padding:0px;
+    
+}
+
+
+body {
+    background-color: #ebe8e5;
+}
+nav {
+    background-color:#8B5A2B ;
+    height: 50px;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  li {
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #D2B48C;
+  }
+
+  .main{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .blog {
+    height:100%;
+    background-color: white;
+    width:90%;
+    max-width: 1000px;
+    
+  }
+
+  .post {
+    padding:50px;
+
+  }
+
+.post #title {
+  font-size:35px;
+  font-family:helvetica;
+  color: #25110d ;
+  margin-bottom:20px;
+}
+
+.post h3 #author {
+  color: #5c5c5c
+}
+
+.post p {
+  font-family: helvetica;
+  color: #552f28;
+}
+
+.hero {
+  background-color:#9DC183;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero h3{
+  font-family: helvetica;
+  color:#383231;
+}
+
+
+
+h1 img {
+  width:120px;
+  height:80px;
+}
+
+
+
+.branding h1{
+  font-family: 'Nothing You Could Do', cursive;
+  font-size:60px;
+  color:#4b690e;
+  text-align: center;
+ }
+
+
+.content {
+  flex:1;
+  margin-right: 20px;
+}
+
+.body {
+  display: block;
+  font-family: monospace;
+  white-space: pre;
+  margin: 1em 0;
+}
+.thumbnail {
+  margin:20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.branding {
+  width:40%;
+  padding:20px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}

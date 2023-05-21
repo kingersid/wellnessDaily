@@ -1,40 +1,55 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}?v=1.1"/>
+</head>
+<body>
+  <header>
+    <nav>
+        <ul>
+      
+      <li><a href="/aboutme">About Me</a></li>
+      <li><a href="/">Home</a></li>
+      </ul>
+    </nav>
+  </header>
 
-{% block head %}
-<title>Task Master</title>
-{% endblock %}
-
-{% block body %}
-<div class="content">
-    <h1 style="text-align: center">Task Master</h1>
-    {% if tasks|length < 1 %}
-    <h4 style="text-align: center">There are no tasks. Create one below!</h4>
-    {% else %}
-    <table>
-        <tr>
-            <th>Task</th>
-            <th>Added</th>
-            <th>Actions</th>
-        </tr>
-        {% for task in tasks %}
-            <tr>
-                <td>{{ task.content }}</td>
-                <td>{{ task.date_created.date() }}</td>
-                <td>
-                    <a href="/delete/{{task.id}}">Delete</a>
-                    <br>
-                    <a href="/update/{{task.id}}">Update</a>
-                </td>
-            </tr>
-        {% endfor %}
-    </table>
-    {% endif %}
-
-    <div class="form">
-        <form action="/" method="POST">
-            <input type="text" name="content" id="content">
-            <input type="submit" value="Add Task">
-        </form>
-    </div>
-</div>
-{% endblock %}
+    <div class="main">
+        
+        <div class="blog">
+          <div class="hero">
+            <div class="branding">
+            <h1>Wellness daily</br>
+            <img src="{{url_for('static',filename='logo.png')}}"></h1>
+          </div>
+          <div class="tagline">
+            <h3>This is a blog about showing up daily
+            to your wellness practice</br> It can be a combination of a morning walk,
+            a cycling trip to the nearest park, a gym session. you name it.</br> We love 
+            consistent folks</h3>
+          </div>
+          </div>
+          {% for post in posts %}
+            <div class="post">
+            <div class="content">
+                <h1 id="title">{{post.title}}</h1>
+                <h3 id="author">By {{post.author}} &nbsp;&nbsp;&nbsp;  date:14th May '23</h3>
+                <div class="thumbnail"><img src="https://placekitten.com/320/180"></div>
+               
+                {{post.body|markdown}}
+                
+              
+              </div>
+      
+            </div>   
+            {% endfor %}
+                 
+            
+        </div>
+    </div> 
+  </body>
+    
+</html>

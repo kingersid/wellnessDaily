@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>about me</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='css/styles2.css')}}"/>
+</head>
+<body>
+  <header>
+    <nav>
+        <ul>
+      <li><a href="/aboutme">About Me</a></li>   
+      <li><a href="/">Home</a></li>
+      
+      </ul>
+    </nav>
+  </header>
+
+
+  <div class="container">
+    <div class="author-bio">
+      <img src="{{url_for('static',filename='sid.jpg')}}" alt="Author Avatar">
+      <h1>Siddharth kinger</h1>
+      <h3>Fitness enthusiast and businessman</h3>
+      <div class="text_blob">
+      {{  bio|markdown}}
+      </div> 
+
+</body>
+</html>
