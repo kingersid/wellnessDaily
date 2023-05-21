@@ -1,10 +1,12 @@
 from flask import Flask, render_template, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy
-from flask_markdown import Markdown
+from flaskext.markdown import Markdown
 
 
 app = Flask(__name__)
-Markdown(app)   
+ 
+Markdown(app)
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog1.db'
 db = SQLAlchemy(app)
 
@@ -57,7 +59,7 @@ In addition to his commitment to fitness, Siddharth is also a seasoned businessm
 Siddharth's passion for fitness and business motivates him to inspire and empower others. Through his expertise and practical knowledge, he shares valuable insights on achieving work-life balance, setting and achieving fitness goals, and unlocking personal and professional potential.
 
 Combining his love for fitness and his business acumen, Siddharth aims to make a positive impact by encouraging individuals to prioritize their health while pursuing their entrepreneurial dreams. His dedication, discipline, and determination serve as an inspiration to those striving for success in both their personal and professional lives.'''
-    return render_template('aboutme.html',bio=bio)
+    return render_template('aboutme.html',bio=(bio))
 
 if __name__ == "__main__":
     app.run(debug=True)
