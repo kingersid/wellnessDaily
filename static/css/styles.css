@@ -98,6 +98,11 @@ nav {
   margin-bottom: 10px;
 }
 
+.post img {
+  width:320px;
+  height:180px;
+}
+
 .hero {
   background-color:#9DC183;
   display:flex;

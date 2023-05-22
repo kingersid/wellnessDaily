@@ -37,7 +37,7 @@
             <div class="content">
                 <h1 id="title">{{post.title}}</h1>
                 <h3 id="author">By {{post.author}} &nbsp;&nbsp;&nbsp;  date:14th May '23</h3>
-                <div class="thumbnail"><img src="https://placekitten.com/320/180"></div>
+                <div class="thumbnail"><img src="{{url_for('static',filename='cardio.jpeg')}}"></div>
                
                 {{post.body|markdown}}
                 
