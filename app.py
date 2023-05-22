@@ -13,7 +13,7 @@ db = SQLAlchemy(app)
 
 
 
-class Post(db.Model):
+class PostL(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(200), nullable=False)
     body = db.Column(db.String(200), nullable=False)
@@ -30,7 +30,7 @@ def new_post():
         body=request.form['body']
         author=request.form['author']
 
-        new_post = Post(title=title,body=body,author=author)
+        new_post = PostL(title=title,body=body,author=author)
 
         try:
             db.session.add(new_post)
@@ -45,7 +45,7 @@ def new_post():
 
 @app.route('/')
 def index():
-    posts = Post.query.order_by(Post.title).all()
+    posts = PostL.query.order_by(PostL.title).all()
     return render_template('index.html', posts=posts)
 
 @app.route('/aboutme')

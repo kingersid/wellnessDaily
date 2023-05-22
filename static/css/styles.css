@@ -3,6 +3,23 @@ Terracotta: #E2725B,Sand beige: #D2B48C Warm brown: #8B5A2B
 Pale yellow: #F0E68C" */
 
 @import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
+html {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 2rem; /* 2 times the base font size */
+}
+
+p {
+  font-size: 1.5rem; /* 1.5 times the base font size */
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px; /* Adjust the base font size for smaller screens */
+  }
+}
 * {
     margin: 0px;
     padding:0px;
@@ -13,9 +30,12 @@ Pale yellow: #F0E68C" */
 body {
     background-color: #ebe8e5;
 }
+
+
 nav {
     background-color:#8B5A2B ;
     height: 50px;
+    width: 100%;
   }
   
   ul {
@@ -75,6 +95,7 @@ nav {
 .post p {
   font-family: helvetica;
   color: #552f28;
+  margin-bottom: 10px;
 }
 
 .hero {
@@ -100,7 +121,7 @@ h1 img {
 
 .branding h1{
   font-family: 'Nothing You Could Do', cursive;
-  font-size:60px;
+  font-size:;
   color:#4b690e;
   text-align: center;
  }
