@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}?version=#"/>
+</head>
+<body>
+  <header>
+    <nav>
+        <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/aboutme">About Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <div class="main">
+     <div class="blog" > 
+      <div class="post">
+       <div class="content"> 
+        <div class="single">  
+    {% for x in post %}
+    <img src="http://placekitten.com/g/720/440"> 
+    <h1>{{ x.title }}</h1>
+    <div class="post-info"><h3>Posted by {{ x.author }}</h3> </div>
+    <div class="post-content">
+        {{ x.body| markdown }}
+    </div>
+    {% endfor %}
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

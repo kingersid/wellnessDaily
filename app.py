@@ -48,6 +48,16 @@ def index():
     posts = PostL.query.order_by(PostL.title).all()
     return render_template('index.html', posts=posts)
 
+
+@app.route('/post/<int:id>')
+def show_post(id):
+    # Fetch the blog post information from the database or wherever you store it
+    post = PostL.query.filter_by(id=id)
+    
+    # Render the template with the post dat
+    return render_template('post.html',post=post)
+
+
 @app.route('/aboutme')
 def about_me():
     bio='''Siddharth Kinger is a passionate fitness enthusiast and successful businessman. He has dedicated his life to maintaining a healthy lifestyle while excelling in his business ventures. With a deep love for fitness, Siddharth believes in the power of physical activity to enhance both personal and professional life.
