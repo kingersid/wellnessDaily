@@ -45,17 +45,18 @@ def new_post():
 
 @app.route('/')
 def index():
+    css_file = url_for('static', filename='css/styles.css', v='1.117')
     posts = PostL.query.order_by(PostL.title).all()
-    return render_template('index.html', posts=posts)
+    return render_template('index.html', posts=posts,css_file=css_file)
 
 
 @app.route('/post/<int:id>')
 def show_post(id):
     # Fetch the blog post information from the database or wherever you store it
     post = PostL.query.filter_by(id=id)
-    
+    css_file = url_for('static', filename='css/styles.css', v='1.117')
     # Render the template with the post dat
-    return render_template('post.html',post=post)
+    return render_template('post.html',post=post,css_file=css_file)
 
 
 @app.route('/aboutme')

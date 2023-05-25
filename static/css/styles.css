@@ -132,10 +132,10 @@ h1 img {
  }
 
 
-.content {
+/* .content {
   flex:1;
-  margin-right: 20px;
-}
+  
+} */
 
 .body {
   display: block;
@@ -163,7 +163,38 @@ h1 img {
 
 }
 
+.single {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.single h1 {
+  margin:20px;
+}
+
+.post-info h3{
+  float:left;
+}
+
+.post-content {
+  margin-top: 40px;
+}
 .single img {
-  width:720px;
-  height:440px;
+  width:100%;
+  height:auto;
+}
+
+@media screen and (max-width:440px) {
+  .post {
+    padding:15px;
+  }
+  
+}
+
+.content a {
+  text-decoration: none;
+  color:black;
 }

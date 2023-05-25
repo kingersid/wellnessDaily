@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Landing Page</title>
-  <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}?version=#"/>
+  <link rel="stylesheet" href='{{css_file}}'>
 </head>
 <body>
   <header>
@@ -22,7 +22,7 @@
        <div class="content"> 
         <div class="single">  
     {% for x in post %}
-    <img src="http://placekitten.com/g/720/440"> 
+    <img src="{{url_for('static',filename='images/sleep.jpeg')}}">
     <h1>{{ x.title }}</h1>
     <div class="post-info"><h3>Posted by {{ x.author }}</h3> </div>
     <div class="post-content">
