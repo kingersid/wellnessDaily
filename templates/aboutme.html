@@ -3,28 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>about me</title>
-  <link rel="stylesheet" href="{{url_for('static',filename='css/styles2.css')}}"/>
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}?v=1.14456"/>
 </head>
 <body>
   <header>
     <nav>
         <ul>
-      <li><a href="/aboutme">About Me</a></li>   
-      <li><a href="/">Home</a></li>
       
+      <li><a href="/aboutme">About Me</a></li>
+      <li><a href="/">Home</a></li>
       </ul>
     </nav>
   </header>
 
 
-  <div class="container">
+  <!-- <div class="container">
     <div class="author-bio">
-      <h1>Siddharth kinger</h1>
+      
       <h3>Fitness enthusiast and businessman</h3>
       <div class="text_blob">
       {{  bio|markdown}}
-      </div> 
+      </div>  -->
+
+      <div class="main">
+        <div class="blog">
+          <div class="post">
+            <div class="content">
+              <h3>Siddharth kinger</h1>
+              <h5>Fitness enthusiast and businessman</h3>
+              {{  bio|markdown}}
+              </div>
+            </div>
+        </div>
+      </div>  
 
 </body>
 </html>

@@ -4,6 +4,9 @@ Pale yellow: #F0E68C" */
 
 @import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
 
+
+@media screen and (max-width: 440px) {
+
 * {
     margin: 0px;
     padding:0px;
@@ -40,7 +43,6 @@ nav {
     text-align: center;
     padding: 16px;
     text-decoration: none;
-    font-family: 'helvetica';
   }
   
   li a:hover {
@@ -52,31 +54,21 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height:100%
   }
 
   .blog {
-    height:100vh;
+    height:100%;
     background-color: white;
     width:90%;
     max-width: 1000px;
     
   }
 
-  .blog #branding{
-    text-align: center;
-    font-family: 'Nothing You Could Do';
-    margin:20px;
-  }
-
-  .blog h2 {
-    margin:20px;
-  }
-
   .post {
     padding:50px;
 
   }
+
 
 .post #title {
   font-family:helvetica;
@@ -90,7 +82,7 @@ nav {
 
 .post p {
   font-family: helvetica;
-  
+  color: #552f28;
   margin-bottom: 10px;
 }
 
@@ -106,14 +98,9 @@ nav {
   align-items: center;
 }
 
-.hero h3{
-  font-family: helvetica;
-  color:#383231;
-}
 
-.content h5 {
-  margin-bottom: 50px;
-}
+
+
 
 h1 img {
   width:120px;
@@ -124,16 +111,11 @@ h1 img {
 
 .branding h1{
   font-family: 'Nothing You Could Do', cursive;
-  font-size:;
   color:#4b690e;
   text-align: center;
  }
 
 
-/* .content {
-  flex:1;
-  
-} */
 
 .body {
   display: block;
@@ -156,10 +138,7 @@ h1 img {
   justify-content: center;
 }
 
-.post-info h3 {
-  font-size:0.5 rem;
 
-}
 
 .single {
   display:flex;
@@ -180,18 +159,15 @@ h1 img {
 .post-content {
   margin-top: 40px;
 }
+
 .single img {
-  max-width:640px;
-  max-height:420px;
+  width:100%;
+  height:auto;
 }
 
 @media screen and (max-width:440px) {
   .post {
     padding:15px;
-  }
-  .single img {
-    width:100%;
-    height:auto;
   }
   
 }

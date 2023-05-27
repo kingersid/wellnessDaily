@@ -23,8 +23,8 @@
         <div class="single">  
     {% for x in post %}
     <img src="{{url_for('static',filename='images/sleep.jpeg')}}">
-    <h1>{{ x.title }}</h1>
-    <div class="post-info"><h3>Posted by {{ x.author }}</h3> </div>
+    <h2>{{ x.title }}</h2>
+    <div class="post-info"><h4>Posted by {{ x.author }}</h4> </div>
     <div class="post-content">
         {{ x.body| markdown }}
     </div>
