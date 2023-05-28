@@ -37,8 +37,8 @@
             <div class="post">
             <div class="content">
                 <h4 id="title"><a href="/post/{{post.id}}">{{post.title}}</a></h4>
-                <h5 id="author">By {{post.author}} &nbsp;&nbsp;&nbsp;  date:14th May '23</h5>
-                <div class="thumbnail"><img src="{{url_for('static',filename='images/sleep.jpeg')}}"></div>
+                <h5 id="author">By {{post.author}} &nbsp;&nbsp;&nbsp;  date:{{post.date}}</h5>
+                <div class="thumbnail"><img src="{{url_for('static',filename='images')}}/{{post.image}}"></div>
                
               
                 

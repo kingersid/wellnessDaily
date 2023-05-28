@@ -2,8 +2,12 @@
 <html>
 <head>
   <title>New Blog Post</title>
+  <link rel="stylesheet" href='{{css_file}}'>
 </head>
 <body>
+
+  <div class=main>
+  <div class="blog">
   <h1>New Blog Post</h1>
 
   <form action="/add_new_post" method="post">
@@ -15,6 +19,12 @@
 
     <label for="author">Author:</label><br>
     <input type="text" id="author" name="author" required><br><br>
+
+    <label for="Image to add">Add image</label><br>
+    <input type="text" id="image" name="image" required><br>
+
+    <label for="date">date</label><br>
+    <input type="text" id="date" name="date" required><br><br>
 
     <input type="submit" value="Submit">
   </form>

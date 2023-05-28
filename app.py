@@ -13,11 +13,13 @@ db = SQLAlchemy(app)
 
 
 
-class PostL(db.Model):
+class PostF(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(200), nullable=False)
     body = db.Column(db.String(200), nullable=False)
     author= db.Column(db.String(200), nullable=False)
+    date= db.Column(db.String(200), nullable=False)
+    image=db.Column(db.String(200), nullable=False)
 
     def __repr__(self):
         return '<post %r>' % self.body
@@ -29,8 +31,10 @@ def new_post():
         title = request.form['title']
         body=request.form['body']
         author=request.form['author']
+        date=request.form['date']
+        image=request.form['image']
 
-        new_post = PostL(title=title,body=body,author=author)
+        new_post = PostF(title=title,body=body,author=author,date=date,image=image)
 
         try:
             db.session.add(new_post)
@@ -42,19 +46,18 @@ def new_post():
     return render_template('update.html')
 
 
-
 @app.route('/')
 def index():
-    css_file = url_for('static', filename='css/styles.css', v='1.132')
-    posts = PostL.query.order_by(PostL.title).all()
+    css_file = url_for('static', filename='css/styles.css', v='1.135')
+    posts = PostF.query.order_by(PostF.title).all()
     return render_template('index.html', posts=posts,css_file=css_file)
 
 
 @app.route('/post/<int:id>')
 def show_post(id):
     # Fetch the blog post information from the database or wherever you store it
-    post = PostL.query.filter_by(id=id)
-    css_file = url_for('static', filename='css/styles.css', v='1.132')
+    post = PostF.query.filter_by(id=id)
+    css_file = url_for('static', filename='css/styles.css', v='1.135')
     # Render the template with the post dat
     return render_template('post.html',post=post,css_file=css_file)
 
@@ -71,7 +74,7 @@ In addition to his commitment to fitness, Siddharth is also a seasoned businessm
 Siddharth's passion for fitness and business motivates him to inspire and empower others. Through his expertise and practical knowledge, he shares valuable insights on achieving work-life balance, setting and achieving fitness goals, and unlocking personal and professional potential.
 
 Combining his love for fitness and his business acumen, Siddharth aims to make a positive impact by encouraging individuals to prioritize their health while pursuing their entrepreneurial dreams. His dedication, discipline, and determination serve as an inspiration to those striving for success in both their personal and professional lives.'''
-    return render_template('aboutme.html',bio=(bio))
+    return render_template('aboutme.html',bio=(bio),css_file=css_file)
 
 if __name__ == "__main__":
     app.run(debug=True)
