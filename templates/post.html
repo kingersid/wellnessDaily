@@ -24,9 +24,9 @@
     {% for x in post %}
     <img src="{{url_for('static',filename='images')}}/{{x.image}}">
     <h2>{{ x.title }}</h2>
-    <div class="post-info"><h4>Posted by {{ x.author }}   &nbsp;&nbsp;&nbsp; 
+    <h5>Posted by {{ x.author }}   &nbsp;&nbsp;&nbsp; 
       date:{{x.date}}
-    </h4> </div>
+    </h5> </div>
     <div class="post-content">
         {{ x.body| markdown }}
     </div>

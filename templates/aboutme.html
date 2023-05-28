@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Landing Page</title>
-  <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}?v=1.14458"/>
+  <link rel="stylesheet" href="{{css_file}}"/>
 </head>
 <body>
   <header>
@@ -30,8 +30,8 @@
         <div class="blog">
           <div class="post">
             <div class="content">
-              <h3>Siddharth kinger</h1>
-              <h5>Fitness enthusiast and businessman</h3>
+              <h3 id="title">Siddharth kinger</h3>
+              <h5>Fitness enthusiast and businessman</h5>
               {{  bio|markdown}}
               </div>
             </div>

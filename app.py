@@ -48,7 +48,7 @@ def new_post():
 
 @app.route('/')
 def index():
-    css_file = url_for('static', filename='css/styles.css', v='1.135')
+    css_file = url_for('static', filename='css/styles.css', v='1.149')
     posts = PostF.query.order_by(PostF.title).all()
     return render_template('index.html', posts=posts,css_file=css_file)
 
@@ -57,14 +57,14 @@ def index():
 def show_post(id):
     # Fetch the blog post information from the database or wherever you store it
     post = PostF.query.filter_by(id=id)
-    css_file = url_for('static', filename='css/styles.css', v='1.135')
+    css_file = url_for('static', filename='css/styles.css', v='1.149')
     # Render the template with the post dat
     return render_template('post.html',post=post,css_file=css_file)
 
 
 @app.route('/aboutme')
 def about_me():
-    css_file = url_for('static', filename='css/styles.css', v='1.131')
+    css_file = url_for('static', filename='css/styles.css', v='1.149')
     bio='''Siddharth Kinger is a passionate fitness enthusiast and successful businessman. He has dedicated his life to maintaining a healthy lifestyle while excelling in his business ventures. With a deep love for fitness, Siddharth believes in the power of physical activity to enhance both personal and professional life.
 
 As a fitness enthusiast, Siddharth actively engages in various workout routines, including weightlifting, cardio exercises, and yoga. He emphasizes the importance of regular exercise, proper nutrition, and a balanced lifestyle to achieve optimal physical and mental well-being.
