@@ -26,10 +26,18 @@
     <h2>{{ x.title }}</h2>
     <h5>Posted by {{ x.author }}   &nbsp;&nbsp;&nbsp; 
       date:{{x.date}}
-    </h5> </div>
+    </h5> 
+    {% for tag in x.tags %}
+    <div class="tag">
+      <a href="/tag/{{tag.name}}">{{tag.name}}</a>
+
+      </div>
+    {% endfor %}
+  </div>
     <div class="post-content">
         {{ x.body| markdown }}
     </div>
+    
     {% endfor %}
     </div>
     </div>

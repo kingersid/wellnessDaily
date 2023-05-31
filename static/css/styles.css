@@ -209,3 +209,21 @@ h1 img {
 .noMargin {
   border-bottom: none;
 }
+
+.tag {
+  display: inline-block;
+  background-color: #e6e6e6;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-family: 'Lato';
+  font-size: 11px;
+}
+
+
+.tag:hover {
+  background-color: #ccc;
+  cursor: pointer;
+}

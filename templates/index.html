@@ -38,6 +38,11 @@
             <div class="content">
                 <h4 id="title"><a href="/post/{{post.id}}">{{post.title}}</a></h4>
                 <h5 id="author">By {{post.author}} &nbsp;&nbsp;&nbsp;  date:{{post.date}}</h5>
+                {% for tag in post.tags %}
+                <div class="tag">
+                    <a href="/tag/{{tag.name}}">{{tag.name}}</a>
+                </div>
+                {% endfor %}
                 <div class="thumbnail"><img src="{{url_for('static',filename='images')}}/{{post.image}}"></div>
                
               
